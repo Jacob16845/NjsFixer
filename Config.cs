@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using System;
 using System.Collections;
@@ -37,7 +37,7 @@ namespace NjsFixer
         public bool enabled = false;
         public bool dontForceNJS = false;
         public float jumpDistance = 24f;
-        public int minJumpDistance = 20;
+        public int minJumpDistance = 10;
         public int maxJumpDistance = 30;
         public bool usePreferredJumpDistanceValues = false;
         public List<NjsPref> preferredValues = new List<NjsPref>();
@@ -85,7 +85,7 @@ namespace NjsFixer
                     UserConfig.enabled = oldConfig.GetBool("NjsFixer", "Enabled", false, true);
                     UserConfig.dontForceNJS = oldConfig.GetBool("NjsFixer", "DontForceNJS", false, true);
                     UserConfig.jumpDistance = oldConfig.GetFloat("NjsFixer", "DesiredJumpDistance", 24f, true);
-                    UserConfig.minJumpDistance = oldConfig.GetInt("NjsFixer", "minJumpDistance", 20, true);
+                    UserConfig.minJumpDistance = oldConfig.GetInt("NjsFixer", "minJumpDistance", 10, true);
                     UserConfig.maxJumpDistance = oldConfig.GetInt("NjsFixer", "maxJumpDistance", 30, true);
                     try
                     {
